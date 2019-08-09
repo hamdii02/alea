@@ -88,15 +88,15 @@ services:
       CONNECT_CONSUMER_INTERCEPTOR_CLASSES: "io.confluent.monitoring.clients.interceptor.MonitoringConsumerInterceptor"
       CONNECT_PLUGIN_PATH: "/usr/share/java,/usr/share/confluent-hub-components,/etc/kafka-connect/jars"
       CONNECT_LOG4J_LOGGERS: org.apache.zookeeper=ERROR,org.I0Itec.zkclient=ERROR,org.reflections=ERROR
-    command: 
-      - /bin/bash
-      - -c 
-      - |
+   # command: 
+      #- /bin/bash
+      #- -c 
+      #- |
         # JDBC Drivers
         # ------------
         # MySQL
-        cd /usr/share/java/kafka-connect-jdbc/
-        curl https://cdn.mysql.com/Downloads/Connector-J/mysql-connector-java-8.0.16.tar.gz | tar xz 
+        #cd /usr/share/java/kafka-connect-jdbc/
+        #curl https://cdn.mysql.com/Downloads/Connector-J/mysql-connector-java-8.0.16.tar.gz | tar xz 
 
   control-center:
     image: confluentinc/cp-enterprise-control-center:5.2.2
